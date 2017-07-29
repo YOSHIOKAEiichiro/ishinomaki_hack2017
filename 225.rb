@@ -18,7 +18,7 @@ code_array.each do |code|
     f.each_line.with_index do |line, index|
       if index == 8
         end_price = line.split(',')[1].to_i
-        if line.split(',')[1].to_i >= min_price && line.split(',')[1].to_i <= max_price
+        if end_price >= min_price && end_price <= max_price
           result << [code, end_price]
         end
       end
